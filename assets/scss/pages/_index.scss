@@ -1,0 +1,376 @@
+.banner {
+    .content {
+        padding-top: 750px;
+        padding-bottom: 50px;
+
+        h1 {
+            font-size: 90px;
+            line-height: 100px;
+            color: $white;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 26px;
+            line-height: 36px;
+            color: $white;
+        }
+
+        @media (max-width: 768px) {
+            padding-top: 350px;
+            h1 {
+                font-size: 60px;
+                line-height: 70px;
+            }
+
+            h3 {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+    }
+}
+
+// About;
+.about {
+    @include background-image();
+    display: flex;
+
+    
+
+    .text {
+        width: 50%;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-sizing: border-box;
+
+        @media (max-width: 992px) {
+            padding: 160px 30px !important;
+        }
+
+        @media (max-width: 768px) {
+            padding: 50px 30px !important;
+        }
+
+        h2 {
+            font-size: 65px;
+            line-height: 75px;
+            font-weight: 700;
+            color: $white;
+            padding-bottom: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        ul {
+            padding-bottom: 15px;
+            font-size: 16px;
+            font-weight: 500;
+            font-style: italic;
+
+            li {
+                position: relative;
+                padding-left: 15px;
+
+                &::before {
+                    content: '';
+                    width: 5px;
+                    height: 5px;
+                    background-color: $bColor;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 12px;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+
+        .text {
+            width: 100%;
+            margin-top: 300px;
+
+            h2 {
+                font-size: 32px;
+                line-height: 42px;
+                color: $primary-color
+            }
+        }
+    }
+}
+
+// Chose plan;
+.chose-plan {
+    @include gradient(to bottom);
+    text-align: center;
+    padding: 120px 0 90px;
+
+    h2 {
+        font-size: 60px;
+        font-weight: 400;
+        font-style: italic;
+        line-height: 70px;
+        color: $white;
+        padding-bottom: 60px;
+    }
+
+    .items {
+        display: flex;
+        justify-content: center;
+
+        
+
+        .item {
+            // background-color: rgba(53, 0, 132, 0.4);
+            background-color: rgba(255, 255, 255, 0.4);
+            margin: 0 15px 30px;
+            padding: 30px;
+
+            h3 {
+                font-size: 80px;
+                font-weight: 400;
+                line-height: 90px;
+                color: $white;
+                font-style: italic;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    width: 80px;
+                    height: 2px;
+                    background-color: $white;
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .price-per-month {
+                position: relative;
+                display: inline-block;
+                font-size: 80px;
+                font-weight: 700;
+                line-height: 90px;
+                color: $white;
+                font-style: italic;
+                margin-top: 20px;
+
+                &::after {
+                    content: '';
+                    width: calc(100% + 50px);
+                    height: 5px;
+                    background-color: $primary-color;
+                    position: absolute;
+                    top: 50%;
+                    left: -16px;
+                    transform: rotate(346deg);
+                }
+            }
+
+            .total-pay {
+                font-size: 80px;
+                line-height: 90px;
+                color: $bgTwo;
+                font-style: italic;
+            }
+
+            .time {
+                font-size: 32px;
+                line-height: 42px;
+                color: $bgTwo;
+                font-weight: 700;
+                font-family: $titleFont;
+            }
+
+            .include {
+                color: $white;
+                font-weight: 400;
+
+                h4 {
+                    font-family: $bodyFont;
+                    padding-bottom: 10px;
+                }
+
+                ul {
+                    padding-bottom: 10px;
+                }
+
+                a {
+                    color: $white;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: 880px) {
+        .items {
+            .item {
+                h3 {
+                    font-size: 32px;
+                    line-height: 42px;
+                }
+
+                .price-per-month {
+                    font-size: 50px;
+                    line-height: 60px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .items {
+            flex-direction: column;
+
+            .item .total-pay {
+                font-size: 52px;
+                line-height: 62px;
+            }
+        }
+    }
+}
+
+// Contact;
+.contact {
+    text-align: center;
+    padding: 100px 0 80px;
+    background-color: $bgThree;
+
+    h4 {
+        font-size: 22px;
+        line-height: 32px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        padding-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 80px;
+        line-height: 90px;
+        padding-bottom: 10px;
+    }
+
+    span {
+        display: block;
+        padding-bottom: 50px;
+    }
+
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 52px;
+            line-height: 62px;
+        }
+    }
+
+
+    .form {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: $white;
+        text-align: left;
+
+        label {
+            display: block;
+            font-weight: 600;
+            padding-bottom: 5px;
+        }
+
+        input {
+            border: 1px solid #ddd;
+            padding: 8px 10px;
+            width: calc(100% - 30px);
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+
+            .form-input {
+                width: 50%;
+                padding: 0 15px;
+                box-sizing: border-box;
+                margin-bottom: 15px;
+            }
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                margin: 0;
+
+                .form-input {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+        }
+
+        .massage {
+            padding: 0 15px;
+            width: 100%;
+
+            textarea {
+                width: calc(100% - 30px);
+                border: 1px solid #ddd;
+                padding: 5px 10px;
+                height: 120px;
+                resize: none;
+            }
+
+            @media (max-width: 768px) {
+                padding: 0;
+            }
+        }
+
+        .agree {
+            padding: 0 15px;
+            width: 100%;
+
+            @media (max-width: 768px) {
+                padding: 0;
+            }
+
+            label,
+            input {
+                display: inline-block;
+                width: auto;
+                cursor: pointer;
+            }
+        }
+
+        .submit {
+            padding: 0 15px;
+            width: 100%;
+
+            @media (max-width: 768px) {
+                padding: 0;
+            }
+
+            button {
+                display: inline-block;
+                font-size: 16px;
+                font-style: italic;
+                text-transform: uppercase;
+                background-color: $primary-color;
+                color: $white;
+                padding: 10px 25px;
+                -webkit-transition: all 0.4s;
+                transition: all 0.4s;
+                border: 0;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}

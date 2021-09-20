@@ -1,0 +1,46 @@
+.future-content {
+    max-width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    .col {
+        padding: 0 15px;
+        box-sizing: border-box;
+        width: 50%;
+
+        ul {
+            padding-bottom: 15px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 15px;
+
+            &::after {
+                content: '';
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: $bColor;
+                position: absolute;
+                top: 12px;
+                left: 0;
+            }
+        }
+    }
+
+    .w-100 {
+        padding: 0 15px;
+        box-sizing: border-box;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        .col {
+            width: 100%;
+        }
+    }
+}
